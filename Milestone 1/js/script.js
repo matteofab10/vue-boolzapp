@@ -5,32 +5,26 @@ const app = new Vue ({
   data: {
     contacts: [
       {
-        name: 'Erika',
+        name: 'Michele',
         avatar: '_1',
         visible: true,
         messages: []
       },
       {
-        name: 'Stella',
+        name: 'Fabio',
         avatar: '_2',
         visible: true,
         messages: []
       },
       {
-        name: 'Christian',
+        name: 'Samuele',
         avatar: '_3',
         visible: true,
         messages: []
       },
       {
-        name: 'Barbara',
+        name: 'Luigi',
         avatar: '_4',
-        visible: true,
-        messages: []
-      },
-      {
-        name: 'Giacomo',
-        avatar: '_5',
         visible: true,
         messages: []
       },

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css">
   <title>Vue Boolzapp</title>
@@ -28,14 +28,33 @@
             <i class="fas fa-ellipsis-v"></i>
          </div>
         </div>
-        <div class="notifications-area"></div>
+        <div class="notifications-area">
+          <div class="bell-off">
+            <i class="fas fa-bell-slash"></i>
+          </div>
+          <div class="active-notifications">
+            <p>Ricevi notifiche di nuovi messaggi</p>
+            <span>Attiva notifiche desktop</span>
+         </div>
+        </div>
         <div class="search-chat">
           <div>
             <i class="fas fa-search"></i>
           </div>
          <input type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
-        <div class="list-chat"></div>
+        <div class="list-chat">
+          <div v-for="contact in contacts" class="contacts-list">
+            <img :src="'css/img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
+            <div class="last-message">
+              <h5>{{ contact.name }}</h5>
+              <p>Lorem</p>
+            </div>
+            <div class="last-date">
+              <span>10/01/2020 16:15:22</span>
+            </div>
+          </div>
+        </div>
       </div>
 
 
