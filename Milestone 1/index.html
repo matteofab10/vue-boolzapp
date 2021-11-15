@@ -17,7 +17,7 @@
   <div class="container-background">
     <div class="container">
       <div class="container-left">
-        <div class="top-content">
+        <div class="top-content-left">
           <div class="personal-profile">
             <img src="css/img/avatar_io.jpg" alt="avatar-io">
             <h4>Matteo Fabio</h4>
@@ -26,7 +26,7 @@
             <i class="fas fa-circle-notch"></i>
             <i class="fas fa-comment-alt"></i>
             <i class="fas fa-ellipsis-v"></i>
-         </div>
+          </div>
         </div>
         <div class="notifications-area">
           <div class="bell-off">
@@ -35,13 +35,13 @@
           <div class="active-notifications">
             <p>Ricevi notifiche di nuovi messaggi</p>
             <span>Attiva notifiche desktop</span>
-         </div>
+          </div>
         </div>
         <div class="search-chat">
           <div>
             <i class="fas fa-search"></i>
           </div>
-         <input type="text" placeholder="Cerca o inizia una nuova chat">
+          <input type="text" placeholder="Cerca o inizia una nuova chat">
         </div>
         <div class="list-chat">
           <div v-for="contact in contacts" class="contacts-list">
@@ -59,9 +59,49 @@
 
 
       <div class="container-right">
-        <div class="top-content-right"></div>
-        <div class="messages-area"></div>
-        <div class="typing-area"></div>
+        <div class="top-content-right">
+          <div class="personal-profile">
+            <img src="css/img/avatar_1.jpg" alt="image-avatar">
+            <section>
+              <h5>Michele</h5>
+              <span>Ultimo accesso alle 10/01/2020 16:15:22</span>
+            </section>
+          </div>
+          <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-paperclip"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
+        <div class="messages-area">
+          <div class="messages-container">
+            <ul>
+              <li class="message-sent">
+                <p>Hai portato a spasso il cane?</p>
+                <span class="date">10/01/2020</span>
+              </li>
+              <li class="message-sent">
+                <p>Ricordati di dargli da mangiare</p>
+                <span class="date">10/01/2020</span>
+              </li>
+              <li class="message-received">
+                <p>Tutto fatto!</p>
+                <span class="date">10/01/2020</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="typing-area">
+          <div class="write-message">
+            <div class="icons">
+              <i class="far fa-smile"></i>
+            </div>
+            <input type="text" placeholder="Scrivi un messaggio">
+            <div class="icons">
+              <i class="fas fa-microphone"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
