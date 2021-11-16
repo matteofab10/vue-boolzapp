@@ -57,7 +57,7 @@
               <p>Lorem</p>
             </div>
             <div class="last-date">
-              <span>00:00:00</span>
+              <span>{{ contact.messages[contact.messages.length - 1].date }}</span>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@
             <img :src="`css/img/avatar${contacts[counter].avatar}.jpg`">
             <section>
               <h5>{{ contacts[counter].name }}</h5>
-              <span>Ultimo accesso alle 10/01/2020 16:15:22</span>
+              <span>Ultimo accesso alle {{ contacts[counter].messages[contacts[counter].messages.length - 1].date }}</span>
             </section>
           </div>
           <div class="icons">
@@ -85,13 +85,9 @@
         <div class="messages-area">
           <div class="messages-container">
             <ul>
-              <li class="sent">
-                <p>Hai portato ecc ecc</p>
-                <span class="date">10/01/2020</span>
-              </li>
-              <li class="received">
-                <p>Tutto fatto!</p>
-                <span class="date">10/01/2020</span>
+              <li v-for="(message, index) in contacts[counter].messages" :class=" [message.status === 'sent' ? 'sent' : 'received' ]">
+                <p>{{message.message}}</p>
+                <span class="date">{{message.date}}</span>
               </li>
             </ul>
           </div>

@@ -155,7 +155,7 @@ body {
   border: none;
 }
 
-/****************** LISTA MESSAGGI  ********************/
+/****************** LISTA MESSAGGI DI SINISTRA ********************/
 
 .list-chat {
   width: 100%;
@@ -232,7 +232,7 @@ body {
   background-color: #ebeaea;
 }
 
-/****************** AREA MESSAGGI  ********************/
+/****************** AREA MESSAGGI DESTRA ********************/
 
 .messages-area {
   height: calc(100% - 140px);
