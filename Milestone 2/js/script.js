@@ -85,10 +85,12 @@ const app = new Vue ({
       },
     ],
 
-    // counter = 0,
+    counter: 0,
   },
 
   methods: {
-    
-  }
+    clickedContact(i) {
+      this.counter = i;
+    }
+  },
 })
