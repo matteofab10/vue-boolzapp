@@ -107,7 +107,7 @@ const app = new Vue ({
     },
 
     sendMessage() {
-        // if(this.addMessage.trim() !== ''){
+        if(this.addMessage.trim() !== ''){
             const addItem = {
                 date: '10/01/2020',
                 message: this.addMessage,
@@ -116,7 +116,7 @@ const app = new Vue ({
 
             this.contacts[this.counter].messages.push(addItem);
             this.addMessage = '';
-        // }
+        }
     },
 
     receiveMessage() {
