@@ -86,7 +86,8 @@ const app = new Vue ({
     ],
 
     counter: 0,
-    lastMessages: ''
+    lastMessages: '',
+    addMessage: '',
   },
 
   methods: {
@@ -94,7 +95,7 @@ const app = new Vue ({
       this.counter = i;
     },
 
-    getLastMessages(i){
+    getLastMessages(i) {
         let lastMessages = '';
         const message = this.contacts[i].messages[this.contacts[i].messages.length - 1].message;
         if(message.length < 25){
@@ -103,6 +104,32 @@ const app = new Vue ({
             lastMessages = message.substr(0,25) + "...";
         }
         return lastMessages;
+    },
+
+    sendMessage() {
+        // if(this.addMessage.trim() !== ''){
+            const addItem = {
+                date: '10/01/2020',
+                message: this.addMessage,
+                status: 'sent'
+            };
+
+            this.contacts[this.counter].messages.push(addItem);
+            this.addMessage = '';
+        // }
+    },
+
+    receiveMessage() {
+        setTimeout(() => {
+            const addItem = {
+                date: '10/01/2020',
+                message: 'ok',
+                status: 'received'
+            };
+
+            this.contacts[this.counter].messages.push(addItem);
+
+        }, 1000);
     }
-  }
+  },
 })
