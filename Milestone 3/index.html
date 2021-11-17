@@ -54,7 +54,7 @@
             <img :src="`css/img/avatar${contact.avatar}.jpg`" :alt="contact.name">
             <div class="last-message">
               <h5>{{ contact.name }}</h5>
-              <p>{{lastMessages = getLastMessages(index)}}</p>
+              <p>{{ getLastMessages(index) }}</p>
             </div>
             <div class="last-date">
               <span>{{ contact.messages[contact.messages.length - 1].date }}</span>
