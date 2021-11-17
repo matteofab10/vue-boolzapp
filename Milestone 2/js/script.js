@@ -86,11 +86,23 @@ const app = new Vue ({
     ],
 
     counter: 0,
+    lastMessages: ''
   },
 
   methods: {
     clickedContact(i) {
       this.counter = i;
+    },
+
+    getLastMessages(i){
+        let lastMessages = '';
+        const message = this.contacts[i].messages[this.contacts[i].messages.length - 1].message;
+        if(message.length < 25){
+            lastMessages = message;
+        } else {
+            lastMessages = message.substr(0,25) + "...";
+        }
+        return lastMessages;
     }
-  },
+  }
 })
