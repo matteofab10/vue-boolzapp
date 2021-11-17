@@ -170,6 +170,7 @@ body {
   height: 80px;
   padding: 8px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
   border-bottom: 1px solid #d8d8d8;

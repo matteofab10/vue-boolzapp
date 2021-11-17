@@ -116,6 +116,7 @@ const app = new Vue ({
 
             this.contacts[this.counter].messages.push(addItem);
             this.addMessage = '';
+            this.receiveMessage()
         }
     },
 
