@@ -272,6 +272,7 @@ body {
   padding: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .messages-container span.date {

@@ -109,7 +109,7 @@ const app = new Vue ({
     sendMessage() {
         if(this.addMessage.trim() !== ''){
             const addItem = {
-                date: '10/01/2020',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 message: this.addMessage,
                 status: 'sent'
             };
@@ -123,7 +123,7 @@ const app = new Vue ({
     receiveMessage() {
         setTimeout(() => {
             const addItem = {
-                date: '10/01/2020',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 message: 'ok',
                 status: 'received'
             };
