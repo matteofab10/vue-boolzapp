@@ -92,6 +92,7 @@ const app = new Vue ({
     counter: 0,
     lastMessages: '',
     addMessage: '',
+    searchForString: ''
   },
 
   methods: {
@@ -135,6 +136,18 @@ const app = new Vue ({
             this.contacts[this.counter].messages.push(addItem);
 
         }, 1000);
+    },
+
+    searchContact() {
+        this.contacts.forEach(contact => {
+            const name = contact.name.toLowerCase();
+            const str = this.searchForString.toLowerCase();
+        if (!name.includes(str)) {
+            contact.visible = false;
+        } else if (str === '') {
+            contact.visible = true;
+        }
+        });
     }
-  },
+  }
 })
