@@ -1,3 +1,7 @@
+dayjs.extend(window.dayjs_plugin_customParseFormat);
+dayjs.locale('it');
+
+
 const app = new Vue ({
 
   el: '#app',
