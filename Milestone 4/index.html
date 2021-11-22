@@ -50,7 +50,7 @@
 
 
         <div class="list-chat">
-          <div v-if="contact.visible || searchForString === '' " @click="clickedContact(index)" v-for="(contact, index) in contacts" class="contacts-list" :class="{active : (contacts[counter] === contact)}">
+          <div v-if="contact.visible" @click="clickedContact(index)" v-for="(contact, index) in contacts" class="contacts-list" :class="{active : (contacts[counter] === contact)}">
             <img :src="`css/img/avatar${contact.avatar}.jpg`" :alt="contact.name">
             <div class="last-message">
               <h5>{{ contact.name }}</h5>
